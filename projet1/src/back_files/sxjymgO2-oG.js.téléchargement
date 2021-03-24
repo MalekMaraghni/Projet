@@ -1,0 +1,5 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["YQ\/gv"]); }
+
+__d("VideoPlayerWwwFalcoEvent",["FalcoLoggerInternal","getFalcoLogPolicy_DO_NOT_USE"],(function(a,b,c,d,e,f){"use strict";a=b("getFalcoLogPolicy_DO_NOT_USE")("1914651");c=b("FalcoLoggerInternal").create("video_player_www",a);e.exports=c}),null);
+__d("VideoPlayerLoggerPlayerStates",[],(function(a,b,c,d,e,f){a="started";b="unpaused";c={STARTED:a,UNPAUSED:b};e.exports=c}),null);
+__d("getVideoBrowserTabId",["guid"],(function(a,b,c,d,e,f){e.exports=a;var g=b("guid")().slice(-8);function a(){return g}}),null);

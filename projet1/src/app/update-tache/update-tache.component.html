@@ -1,0 +1,66 @@
+<mat-card style="width: 40%; margin: auto; margin-top: 5%;" >
+    <div class="d-flex justify-content-center form_container" >
+
+<form #updateForm="ngForm">
+    <div class="form-group">
+      <label for="id_t">ID projet</label><br>
+      <input type="text" id="id_t"  [(ngModel)]="tacheToUpdate.id_t" name="id_t">
+    </div>
+    <div class="form-group">
+      <label for="nom_t">Nom de projet</label><br>
+      <input type="text" id="nom_t"  [(ngModel)]="tacheToUpdate.nom_t" name="nom_t">
+    </div>
+    
+    <div class="form-group">
+      <label for="description">Nombre des taches</label><br>
+      <input type="number" id="description"  [(ngModel)]="tacheToUpdate.description" name="description">
+    </div>
+    <div class="form-group">
+      <label for="date_debut">Date Debut</label><br>
+      <input type="date" id="date_debut"  [(ngModel)]="tacheToUpdate.date_debut" name="date_debut">
+    </div>
+    <div class="form-group">
+      <label for="date_fin">Date fin</label><br>
+      <input type="date" id="date_fin"  [(ngModel)]="tacheToUpdate.date_fin" name="date_fin">
+    </div> 
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Nom projet</mat-label>
+        <mat-select formControlName="nom_P"  >
+          <mat-option *ngFor="let projet of projetsDetails" value="{{projet.nom_P}}">{{projet.nom_P}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+
+      <!--choisier l'id de co-equipier-->
+      <mat-form-field appearance="fill">
+        <mat-label>Email co-équipier</mat-label>
+        <mat-select formControlName="email" >
+          <mat-option *ngFor="let coequipier of coequipiersDetails" value="{{coequipier.email}}">{{coequipier.email}}</mat-option>
+        </mat-select>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Etat</mat-label>
+        
+        <mat-select  formControlName="etat">
+      <mat-option *ngFor="let etat of etats"  value="{{ etat }}" >
+        {{ etat }}
+      </mat-option>
+    </mat-select>
+</mat-form-field>
+    <div class="d-flex justify-content-center mt-3 login_container"> 
+        <button   name="button" type="submit" value="Update"  class="btn btn-primary btn-lg btn-block" 
+        >
+            Update
+        </button>
+      </div>
+    </form>
+
+
+</div>
+</mat-card>
+
+
+
+
+
